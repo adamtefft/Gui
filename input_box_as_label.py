@@ -58,12 +58,12 @@ class KilConverterGUI:
         # It will not proceed with the code until the user closes out the window
 
     def convert(self):
-        self.kilo = float(self.kilo_entry.get())
-        self.miles = round(self.kilo * 0.6214, 2)
+        kilo = float(self.kilo_entry.get())
+        miles = round(self.kilo * 0.6214, 2)
 
-        # tkinter.messagebox.showinfo(
-        # "Result", str(kilo) + 'kilometers is equal to ' + str(miles) + 'miles.')
-        self.miles_label_var.set(self.miles)
+        tkinter.messagebox.showinfo("Result", str(kilo) + 'kilometers is equal to ' + str(miles) + 'miles.')
+
+        #self.miles_label_var.set(self.miles)
 
 
 myinstance = KilConverterGUI()

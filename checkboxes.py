@@ -13,7 +13,7 @@ class myGUI:
         self.main_window.geometry("500x200")
         # This changes the size of the window
 
-        self.main_window.title("Frames and Buttons Demo")
+        self.main_window.title("Checkboxes Demo")
         # This adds a title to the top of the program
 
         self.top_frame = tkinter.Frame(self.main_window)
@@ -60,11 +60,11 @@ class myGUI:
 
         if self.cb_var1.get() == 1:
             # This is checking to see if the checkbox is checked, if it is not, it would be null
-            self.message += '1/n'
+            self.message += '1\n'
         if self.cb_var2.get() == 1:
-            self.message += '2/n'
+            self.message += '2\n'
         if self.cb_var3.get() == 1:
-            self.message += '3/n'
+            self.message += '3\n'
 
         tkinter.messagebox.showinfo(
             "Selection", self.message)
