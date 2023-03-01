@@ -61,9 +61,9 @@ class KilConverterGUI:
         kilo = float(self.kilo_entry.get())
         miles = round(self.kilo * 0.6214, 2)
 
-        tkinter.messagebox.showinfo("Result", str(kilo) + 'kilometers is equal to ' + str(miles) + 'miles.')
+        #tkinter.messagebox.showinfo("Result", str(kilo) + 'kilometers is equal to ' + str(miles) + 'miles.')
 
-        #self.miles_label_var.set(self.miles)
+        self.miles_label_var.set(self.miles)
 
 
 myinstance = KilConverterGUI()
