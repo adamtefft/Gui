@@ -152,6 +152,7 @@ class myGUI:
         tkinter.messagebox.showinfo("Title of the Messagebox",self.message)
 
 
+# The name of this must be the same as the name of the Class at the top in order for the program to run
 myinstance = myGUI()
 
 print("moving on.......")
