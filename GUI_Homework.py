@@ -71,11 +71,11 @@ class myGUI:
 
         self.radio_var = tkinter.IntVar()
         self.radiobutton1 = tkinter.Radiobutton(
-            self.rb_frame, variable=self.radio_var, text='Male', value=True)
+            self.rb_frame, variable=self.radio_var, text='Male', value='Male')
         self.radiobutton1.pack(side='left')
 
         self.radiobutton2 = tkinter.Radiobutton(
-            self.rb_frame, variable=self.radio_var, text='Female', value=True)
+            self.rb_frame, variable=self.radio_var, text='Female', value='Female')
         self.radiobutton2.pack(side='left')
 
         self.check_var1 = tkinter.IntVar()
@@ -122,9 +122,9 @@ class myGUI:
         if self.check_var1.get() != 1:
             tkinter.messagebox.showinfo(
                 "Text Box Title", "Both boxes must be checked")
-        if self.check_var2.get() != 1:
-            tkinter.messagebox.showinfo(
-                "Text Box Title", "Both boxes must be checked")
+            if self.check_var2.get() != 1:
+                tkinter.messagebox.showinfo(
+                    "Text Box Title", "Both boxes must be checked")
 
         else:
             tkinter.messagebox.showinfo("Text Box Title", "Success!")
