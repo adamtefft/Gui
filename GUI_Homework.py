@@ -75,8 +75,7 @@ class myGUI:
         self.check_var1 = tkinter.IntVar()
         self.check_var2 = tkinter.IntVar()
 
-        self.checkbutton1 = tkinter.Checkbutton(
-            self.cb1, text='I agree with terms and conditions', variable=self.check_var1)
+        self.checkbutton1 = tkinter.Checkbutton(self.cb1, text='I agree with terms and conditions', variable=self.check_var1)
         self.checkbutton1.pack(side='left')
 
         self.checkbutton2 = tkinter.Checkbutton(self.cb2, text='I want to recieve the newsletter', variable=self.check_var2)
@@ -95,22 +94,22 @@ class myGUI:
         female = self.radio_var.get()
 
         if len(email) < 3 or len(email) > 30:
-            tkinter.messagebox.showinfo("Text Box Title", "Email must be inbetween 3-14 characters")
-        if len(password) < 8:
+            tkinter.messagebox.showinfo("Text Box Title", "Email must be inbetween 3-30 characters")
+        elif len(password) < 8:
             tkinter.messagebox.showinfo("Text Box Title", "Password must be at least 8 characters long")
-        if password != password2:
+        elif password != password2:
             tkinter.messagebox.showinfo("Text Box Title", "Passwords do not match")
         # I need to check to make sure either the Male or Female RadioButton is checked
 
-        if male != 1:
+        elif male != 1:
             if female != 2:
                 tkinter.messagebox.showinfo("Text Box Title", "You must select a Gender")
 
         # I need to figure this out
 
-        if self.check_var1.get() != 1:
+        elif self.check_var1.get() != 1:
             tkinter.messagebox.showinfo("Text Box Title", "Both boxes must be checked")
-        if self.check_var2.get() != 1:
+        elif self.check_var2.get() != 1:
             tkinter.messagebox.showinfo("Text Box Title", "Both boxes must be checked")
 
         else:

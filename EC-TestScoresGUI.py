@@ -101,7 +101,16 @@ class myGUI:
         # These take the entrys from the method above and assigns them to variables in order to calculate the average
 
         test_total = test1 + test2 + test3
+
+
         test_average = round(test_total / 3, 2)
+
+        if test_average < 70:
+            self.average_label.config(bg="Red")
+        elif test_average < 90:
+            self.average_label.config(bg="Yellow")
+        else:
+            self.average_label.config(bg="Green")
 
         self.display_average.set(test_average)
         # tkinter.messagebox.showinfo("Title of the messagebox",f"Average: {test_average}")
